@@ -47,7 +47,7 @@ export default function PlaylistDetail() {
                     toast.error('Playlist not found');
                     router.push('/');
                 }
-            } catch (error) {
+            } catch (error: any) {
                 toast.error('Failed to load playlist');
                 router.push('/');
             } finally {
@@ -64,7 +64,7 @@ export default function PlaylistDetail() {
                 await deletePlaylist(playlistId);
                 toast.success('Playlist deleted successfully');
                 router.push('/');
-            } catch (error) {
+            } catch (error: any) {
                 toast.error('Failed to delete playlist');
             }
         }
@@ -82,7 +82,7 @@ export default function PlaylistDetail() {
             setPlaylist(updatedPlaylist);
             setIsEditing(false);
             toast.success('Playlist updated successfully');
-        } catch (error) {
+        } catch (error: any) {
             toast.error('Failed to update playlist');
         }
     };
@@ -95,7 +95,7 @@ export default function PlaylistDetail() {
             // Update the songs list
             setPlaylistSongs(playlistSongs.filter(song => song.id !== songId));
             toast.success('Song removed from playlist');
-        } catch (error) {
+        } catch (error: any) {
             toast.error('Failed to remove song from playlist');
         }
     };

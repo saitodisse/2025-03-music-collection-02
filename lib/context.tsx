@@ -69,7 +69,7 @@ export const MusicProvider: React.FC<{ children: ReactNode }> = ({ children }) =
                 setArtists(artistsData);
                 setSongs(songsData);
                 setPlaylists(playlistsData);
-            } catch (error) {
+            } catch (error: any) {
                 console.error('Failed to load data:', error);
             } finally {
                 setLoading(false);
@@ -281,7 +281,7 @@ export const MusicProvider: React.FC<{ children: ReactNode }> = ({ children }) =
                 const jsonData = decodeURIComponent(atob(shareParam));
                 await importCollection(jsonData);
             }
-        } catch (error) {
+        } catch (error: any) {
             console.error('Failed to load from URL:', error);
             throw new Error('Invalid share URL');
         }

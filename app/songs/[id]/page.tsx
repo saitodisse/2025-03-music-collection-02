@@ -43,7 +43,7 @@ export default function SongDetail() {
                     toast.error('Song not found');
                     router.push('/');
                 }
-            } catch (error) {
+            } catch (error: any) {
                 toast.error('Failed to load song');
                 router.push('/');
             } finally {
@@ -60,7 +60,7 @@ export default function SongDetail() {
                 await deleteSong(songId);
                 toast.success('Song deleted successfully');
                 router.push('/');
-            } catch (error) {
+            } catch (error: any) {
                 toast.error('Failed to delete song');
             }
         }
@@ -93,7 +93,7 @@ export default function SongDetail() {
             setSong(updatedSong);
             setIsEditing(false);
             toast.success('Song updated successfully');
-        } catch (error) {
+        } catch (error: any) {
             toast.error('Failed to update song');
         }
     };

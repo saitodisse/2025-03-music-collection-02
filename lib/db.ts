@@ -205,7 +205,7 @@ export const importData = async (jsonData: string): Promise<void> => {
       };
       transaction.onerror = () => reject(transaction.error);
     });
-  } catch (error) {
+  } catch (error: any) {
     throw new Error(`Import failed: ${error}`);
   }
 };

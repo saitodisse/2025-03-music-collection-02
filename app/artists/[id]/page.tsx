@@ -37,7 +37,7 @@ export default function ArtistDetail() {
                     toast.error('Artist not found');
                     router.push('/');
                 }
-            } catch (error) {
+            } catch (error: any) {
                 toast.error('Failed to load artist');
                 router.push('/');
             } finally {
@@ -54,7 +54,7 @@ export default function ArtistDetail() {
                 await deleteArtist(artistId);
                 toast.success('Artist deleted successfully');
                 router.push('/');
-            } catch (error) {
+            } catch (error: any) {
                 toast.error('Failed to delete artist');
             }
         }
@@ -72,7 +72,7 @@ export default function ArtistDetail() {
             setArtist(updatedArtist);
             setIsEditing(false);
             toast.success('Artist updated successfully');
-        } catch (error) {
+        } catch (error: any) {
             toast.error('Failed to update artist');
         }
     };
