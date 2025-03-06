@@ -34,8 +34,8 @@ Next.js 15.2, React 19, TailwindCSS, and shadcn UI components.
 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/music-collection-app.git
-cd music-collection-app
+git clone https://github.com/saitodisse/2025-03-music-collection-02.git
+cd 2025-03-music-collection-02
 ```
 
 2. Install dependencies
